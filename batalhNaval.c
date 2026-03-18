@@ -23,13 +23,20 @@ int main(void) {
         printf("%d ", i + 1);
         for (int j = 0; j < 10; j++) {
 
+            tabuleiro[i][j] = 0;      // água
+        
             if (i == 2 && (j == 3 || j == 4 || j == 5)) {
                 tabuleiro[i][j] = 3;      // parte do navio
-            } else {
-                tabuleiro[i][j] = 0;      // água
-            }
+            } 
 
             if(j == 8 && (i == 5 || i == 6 || i == 7 ))
+            {
+                tabuleiro[i][j] = 3;
+            }
+
+            if((i == 6 &&  j == 0)|| 
+               (i== 7 &&j == 1)|| 
+               (i == 8 && j == 2))
             {
                 tabuleiro[i][j] = 3;
             }
