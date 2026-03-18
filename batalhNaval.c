@@ -44,6 +44,7 @@ int main(void) {
             printf(" %d", tabuleiro[i][j]);
         }
         printf("\n");
+        
     }
 
 
