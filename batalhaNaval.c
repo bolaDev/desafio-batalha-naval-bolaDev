@@ -5,19 +5,40 @@
 
 int main() {
 
-    char linha[10] = {'A','B','C','D','E','F','G','H','I','J'};
-    int coluna[10] = {1,2,3,4,5,6,7,8,9,10};
+    char linha[10]={'A','B','C','D','E','F','G','H','I','J'};
+    int tabuleiro[10][10];
 
-    for(int j = 0; j < 10; j++)
+    printf(" TABULEIRO BATALHA NAVAL \n");
+    printf("  ");
+
+    for(int j= 0;j<10;j++)
     {
-        printf(" %c ",linha[j]);
+        printf("%c ",linha[j]);
     }
 
-    printf("\n");
-
-    for(int i = 1; i <=10; i++)
+    printf(" \n");
+    
+    for(int i=0;i<10;i++)
     {
-        printf("%d\n",coluna[i]);
+        printf("%d ",i+1);
+        for(int j= 0;j<10;j++)
+        {
+            if((i == 2 && j == 3)){
+                printf(" %d",tabuleiro[i][j]=3);
+            }else if ((i == 2 && j == 4))
+            {
+                printf(" %d",tabuleiro[i][j]=3);
+            }else if((i == 2 && j == 5)){
+                printf(" %d",tabuleiro[i][j]=3);
+            }
+            else{
+                printf(" %d",tabuleiro[i][j] = 0);
+            }
+            
+            
+        }
+        
+        printf("\n");
     }
 
     // Nível Aventureiro - Expansão do Tabuleiro e Posicionamento Diagonal
