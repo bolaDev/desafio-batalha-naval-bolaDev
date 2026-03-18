@@ -3,43 +3,36 @@
 // Desafio Batalha Naval - MateCheck
 
 
-int main() {
+#include <stdio.h>
 
-    char linha[10]={'A','B','C','D','E','F','G','H','I','J'};
+int main(void) {
+    char linha[10] = {'A','B','C','D','E','F','G','H','I','J'};
     int tabuleiro[10][10];
 
-    printf(" TABULEIRO BATALHA NAVAL \n");
+    printf(" TABULEIRO BATALHA NAVAL\n");
     printf("  ");
 
-    for(int j= 0;j<10;j++)
-    {
-        printf("%c ",linha[j]);
+    for (int j = 0; j < 10; j++) {
+        printf("%c ", linha[j]);
     }
+    printf("\n");
 
-    printf(" \n");
-    
-    for(int i=0;i<10;i++)
-    {
-        printf("%d ",i+1);
-        for(int j= 0;j<10;j++)
-        {
-            if((i == 2 && j == 3)){
-                printf(" %d",tabuleiro[i][j]=3);
-            }else if ((i == 2 && j == 4))
-            {
-                printf(" %d",tabuleiro[i][j]=3);
-            }else if((i == 2 && j == 5)){
-                printf(" %d",tabuleiro[i][j]=3);
+    for (int i = 0; i < 10; i++) {
+        printf("%d ", i + 1);
+        for (int j = 0; j < 10; j++) {
+
+            if (i == 2 && (j == 3 || j == 4 || j == 5)) {
+                tabuleiro[i][j] = 3;      // parte do navio
+            } else {
+                tabuleiro[i][j] = 0;      // água
             }
-            else{
-                printf(" %d",tabuleiro[i][j] = 0);
-            }
-            
-            
+
+            printf(" %d", tabuleiro[i][j]);
         }
-        
         printf("\n");
     }
+
+
 
     // Nível Aventureiro - Expansão do Tabuleiro e Posicionamento Diagonal
     // Sugestão: Expanda o tabuleiro para uma matriz 10x10.
