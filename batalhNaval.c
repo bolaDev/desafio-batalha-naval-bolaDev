@@ -40,6 +40,12 @@ int main(void) {
             {
                 tabuleiro[i][j] = 3; //Navio Diagonal
             }
+            if((i == 6 && j == 4)||
+                (i == 5 && j == 5)||
+                (i == 4 && j == 6))
+            {
+                tabuleiro[i][j] = 3; // Navio Diagon
+            }
 
             printf(" %d", tabuleiro[i][j]);
         }
