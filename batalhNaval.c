@@ -52,6 +52,8 @@ int main(void) {
         printf("\n");
     }
 
+    printf("Tabuleiro com habilidades\n");
+
 
     return 0;
 }
