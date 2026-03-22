@@ -44,7 +44,7 @@ int main(void) {
                 (i == 5 && j == 5)||
                 (i == 4 && j == 6))
             {
-                tabuleiro[i][j] = 3; // Navio Diagon
+                tabuleiro[i][j] = 3; // Navio Diagonal
             }
 
             printf(" %d", tabuleiro[i][j]);
